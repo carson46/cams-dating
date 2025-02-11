@@ -1,0 +1,48 @@
+
+
+@model Application
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html lang="">
+<head>
+    <title>Dating Application</title>
+    <h1 >Dating Application</h1>
+</head>
+
+<form method="post">
+    <label asp-for="FirstName">First Name: </label>
+    <input asp-for="FirstName"/>
+    <br/><br/>
+    <label asp-for="LastName">Last Name</label>
+    <input asp-for="LastName"/>
+    <br/><br/>
+    <label asp-for="Age">Age:</label>
+    <input asp-for="Age"/>
+    <br/><br/>
+    <label asp-for="Hobbies">Hobbies:</label>
+    <input asp-for="Hobbies"/>
+    <br/><br/>
+    <label asp-for="Phone">Phone:</label>
+    <input asp-for="Phone"/>
+    <br/><br/>
+    <label asp-for="Major">Major:</label>
+    <input asp-for="Major"/>
+    <br/><br/>
+    <label asp-for="Occupation">Occupation</label>
+    <input asp-for="Occupation"/>
+    <br/><br/>
+    <label asp-for="Clingy">Are you super clingy?</label>
+    <select asp-for="Clingy">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    
+    <br/><br/>
+    <button type="submit">Submit Application</button>
+</form>
+
+
