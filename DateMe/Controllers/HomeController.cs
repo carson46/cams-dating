@@ -11,13 +11,7 @@ public class HomeController : Controller
     {
         return View();
     }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-
+    
     [HttpGet]
     public IActionResult DatingApplication()
     {
@@ -27,7 +21,12 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult DatingApplication(Application response)
     {
-        return View("Confirmation");
+        return View("Confirmation", response);
+    }
+
+    public IActionResult Confirmation(Application response)
+    {
+        return View(response);
     }
 
    
