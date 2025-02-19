@@ -1,17 +1,14 @@
- 
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Received</title>
-    
-    <h2>Application Received! Let's hope he chooses you.</h2>
+ @model Application
+ 
+    @if (Model.Clingy == false) 
+    {
+    <h2>Application Received! Thank you, @Model.FirstName</h2>
     <h3>You should receive a response within a week and a half because he's getting so many of these</h3>
-</head>
-
-</html>
+    }
+    else {
+    <h2>My bad I forgot I was in a relationship, let me see if I've got a friend for you.</h2>
+    }
