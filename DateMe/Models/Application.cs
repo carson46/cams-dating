@@ -6,6 +6,19 @@ namespace Mission6.Models;
 
 public class Application
 {
+    public Application(int applicationId, string firstName, string lastName, int age, string hobbies, string phone, string major, string occupation, bool clingy)
+    {
+        ApplicationId = applicationId;
+        FirstName = firstName;
+        LastName = lastName;
+        Age = age;
+        Hobbies = hobbies;
+        Phone = phone;
+        Major = major;
+        Occupation = occupation;
+        Clingy = clingy;
+    }
+
     [Key]
     [Required]
     public int ApplicationId { get; set; }
